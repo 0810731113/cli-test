@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "cli-test",
   "bin": {
-    "cli-test": "src/app"
+    "cli-test": "src/app.js"
   },
-  "main": "src/app",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

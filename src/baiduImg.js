@@ -97,3 +97,5 @@ const autoScroll = async page => {
 
 
 })()
+
+module.exports = {convert2Img,autoScroll}
