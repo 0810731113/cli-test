@@ -1,0 +1,25 @@
+{
+  "name": "cli-test",
+  "version": "1.0.0",
+  "description": "cli-test",
+  "bin": {
+    "cli-test": "src/app"
+  },
+  "main": "src/app",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0810731113/cli-test.git"
+  },
+  "author": "libo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0810731113/cli-test/issues"
+  },
+  "homepage": "https://github.com/0810731113/cli-test#readme",
+  "dependencies": {
+    "puppeteer": "^8.0.0"
+  }
+}
