@@ -68,32 +68,32 @@ const autoScroll = async page => {
 }
 
 (async () => {
-    const browser = await puppeteer.launch();
-    const page = await browser.newPage();
-    await page.goto("https://image.baidu.com");
-    console.log("go to https://image.baidu.com");
-    await page.focus("#kw");
-    await page.keyboard.sendCharacter("美女");
-    await page.waitFor(".s_btn_wr");
-    await page.click(".s_btn_wr");
-    console.log("go to search list");
-
-
-    page.on("load", async () => {
-        await autoScroll(page);
-        console.log("page loading done, start fetch...");
-        const srcs = await page.evaluate(() => {
-            const images = document.querySelectorAll('img.main_img');
-            return Array.prototype.map.call(images,img => img.src);
-        })
-
-        console.log(`get ${srcs.length} images, start download`);
-        for(let i = 0; i < srcs.length; i++){
-            // await page.waitFor(Math.random() * 5000);
-            await convert2Img(srcs[i], target);
-            console.log(`finished ${i + 1} / ${srcs.length} images`);
-        }
-    })
+    // const browser = await puppeteer.launch();
+    // const page = await browser.newPage();
+    // await page.goto("https://image.baidu.com");
+    // console.log("go to https://image.baidu.com");
+    // await page.focus("#kw");
+    // await page.keyboard.sendCharacter("美女");
+    // await page.waitFor(".s_btn_wr");
+    // await page.click(".s_btn_wr");
+    // console.log("go to search list");
+    //
+    //
+    // page.on("load", async () => {
+    //     await autoScroll(page);
+    //     console.log("page loading done, start fetch...");
+    //     const srcs = await page.evaluate(() => {
+    //         const images = document.querySelectorAll('img.main_img');
+    //         return Array.prototype.map.call(images,img => img.src);
+    //     })
+    //
+    //     console.log(`get ${srcs.length} images, start download`);
+    //     for(let i = 0; i < srcs.length; i++){
+    //         // await page.waitFor(Math.random() * 5000);
+    //         await convert2Img(srcs[i], target);
+    //         console.log(`finished ${i + 1} / ${srcs.length} images`);
+    //     }
+    // })
 
 
 })()
