@@ -24,7 +24,7 @@ $ yarn
 ```json
 "name": "cli-test",
 "bin": {
-    "cli-test": "./src/app.js"
+    "cli-test": "./src/baiduIndex.js"
   },
 ```
 
@@ -36,7 +36,7 @@ $ yarn
 
 第一步，我们先写一个 Hello，World
 
-- 在 `/src/app.js` 中编写代码如下
+- 在 `/src/baiduIndex.js` 中编写代码如下
 
 ```js
 #!/usr/bin/env node
@@ -65,7 +65,7 @@ getScreenShot();
 
 - 在终端输入命令：`cli-test -V`，是否显示对应的版本号，如果有，则说明前面我们的配置都是成功的
 
-- 编写 `/src/app.js` 文件如下：
+- 编写 `/src/baiduIndex.js` 文件如下：
 
 参考资料：
 
